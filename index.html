@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LifeSnap Login</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="login.css" />
+</head>
+
+<body class="flex items-center justify-center min-h-screen">
+
+  <!-- LOGIN CARD -->
+  <div class="glass-card rounded-2xl p-10 w-full max-w-md relative z-10">
+
+    <!-- LOGO & HEADER (Size Increased 12-15%) -->
+    <div class="flex items-center justify-center mb-8">
+      <img src="logo69.jpeg" alt="LifeSnap Logo" class="w-14 h-14 rounded-full border-2 border-white mr-4" />
+      <h1 class="text-4xl font-bold tracking-wide text-white">
+        Life<span class="text-teal-400">Snap</span>
+      </h1>
+    </div>
+
+    <h2 class="text-center text-2xl font-semibold text-gray-100 mb-8">
+      Log in to your account
+    </h2>
+
+    <form id="loginForm" class="space-y-6">
+
+      <!-- EMAIL INPUT -->
+      <div class="input-group">
+        <input id="email" type="email" class="input-field" placeholder=" " required />
+        <label for="email" class="floating-label">Email</label>
+      </div>
+
+      <!-- PASSWORD INPUT -->
+      <div class="input-group">
+        <input id="password" type="password" class="input-field" placeholder=" " required />
+        <label for="password" class="floating-label">Password</label>
+        <i id="togglePassword" class="fa-regular fa-eye input-icon"></i>
+      </div>
+
+      <!-- REMEMBER + FORGOT -->
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mt-3 gap-3">
+        <label class="flex items-center space-x-2 text-sm font-medium cursor-pointer">
+          <input type="checkbox" class="accent-teal-400" />
+          <span>Remember Me</span>
+        </label>
+        <a href="#" class="text-sm font-medium text-gray-200 hover:text-teal-400 transition">
+          Forgot Password?
+        </a>
+      </div>
+
+      <!-- LOGIN BUTTON -->
+      <button type="submit" class="w-full py-3 mt-4 rounded-lg btn-login text-lg">
+        Log In
+      </button>
+
+      <!-- GOOGLE SIGN-IN -->
+      <button type="button" onclick="handleGoogleSignIn()" class="flex items-center justify-center w-full mt-4 py-3 rounded-lg btn-google text-lg">
+        <img src="https://developers.google.com/identity/images/g-logo.png" alt="Google Logo" class="w-5 h-5 mr-2" />
+        Sign in with Google
+      </button>
+
+      <!-- SIGN UP LINK -->
+      <div class="text-center mt-10 text-sm">
+        <a href="#" class="text-gray-200 hover:text-teal-400 transition">New user? Sign Up</a>
+      </div>
+    </form>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>
